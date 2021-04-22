@@ -29,11 +29,11 @@ steps:
       feedsToUse: config
       nugetConfigPath: nuget.config
 
-  - task: VSBuild@1
+  - task: MSBuild@1
     displayName: 'Build solution **\*.sln'
     inputs:
       solution: '**\*.sln'
-      vsVersion: '15.0'
+      msbuildVersion: '15.0'
 
   - task: DotNetCoreCLI@2
     displayName: 'Install AzureSignTool'
